@@ -1,0 +1,6 @@
+<resources>
+    <color name="button_background">#FF6200EE</color> <!-- Purple -->
+    <color name="button_text_color">#FFFFFF</color> <!-- White -->
+    <color name="display_background">#F1F1F1</color> <!-- Light gray background for display -->
+    <color name="display_text_color">#000000</color> <!-- Black text for display -->
+</resources>

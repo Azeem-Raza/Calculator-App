@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- TextView to display numbers and results -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="32sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:text="@string/default_display"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_grid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- GridLayout for calculator buttons -->
+    <GridLayout
+        android:id="@+id/buttons_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Calculator buttons -->
+        <Button android:id="@+id/btn7" android:text="@string/btn_7" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn8" android:text="@string/btn_8" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn9" android:text="@string/btn_9" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btnDivide" android:text="@string/btn_divide" style="@style/CalculatorButton"/>
+
+        <Button android:id="@+id/btn4" android:text="@string/btn_4" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn5" android:text="@string/btn_5" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn6" android:text="@string/btn_6" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btnMultiply" android:text="@string/btn_multiply" style="@style/CalculatorButton"/>
+
+        <Button android:id="@+id/btn1" android:text="@string/btn_1" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn2" android:text="@string/btn_2" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn3" android:text="@string/btn_3" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btnMinus" android:text="@string/btn_minus" style="@style/CalculatorButton"/>
+
+        <Button android:id="@+id/btnClear" android:text="@string/btn_clear" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btn0" android:text="@string/btn_0" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btnPercent" android:text="@string/btn_percent" style="@style/CalculatorButton"/>
+        <Button android:id="@+id/btnPlus" android:text="@string/btn_plus" style="@style/CalculatorButton"/>
+
+        <Button android:id="@+id/btnEqual" android:text="@string/btn_equal" style="@style/CalculatorButton"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnSpan="4"/>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
